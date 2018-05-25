@@ -1,13 +1,25 @@
 @keyframes hero {
-    0%      {left:0%; top:0%;}
-    100%    {left:58%; top:0%;}
+    0%      {border-color: red; left:18px; top:20px;}
+    10%     {border-color: red; left:500px; top:20px;}
+    20%     {border-color: red; left:500px; top:200px;}
+    30%     {border-color: red; left:270px; top:200px; transform: rotate(0)}
+    40%     {border-color: red; transform: rotate(45deg);}
+    50%     {border-color: red; left:270px; top:200px; transform: rotate(0)}
+    60%     {border-color: blue; left:18px; top:205px;}
+    70%     {border-color: red; left:475px; top:475px; background: transparent; border-radius: 0;}
+    90%     {background: radial-gradient(#f76b1c, #f8d161); size: 150px; border-radius: 50px;}
+    100%    {background: radial-gradient(#f76b1c, #f8d161); size: 150px; border-radius: 50px;}
 }
 #hero {
     border: 1px dashed red;
-    position: relative;
+    position: absolute;
     display: block;
-    height: 100px;
-    width: 100px;
-    animation: hero 5s linear infinite ;
-    
+    height: 73px;
+    width: 73px;
+    animation: hero 20s infinite;
+}
+#stage {
+    height: 600px;
+    width: 600px;
+    position: relative;
 }
