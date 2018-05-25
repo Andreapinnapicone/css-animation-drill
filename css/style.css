@@ -1,20 +1,51 @@
-@keyframes first {
-    0%      {border-color: red; left:18px; top:20px;}
-    25%     {border-color: red; left:500px; top:20px;}
-    50%     {border-color: red; left:500px; top:200px;}
-    75%     {border-color: red; left:500px; top:200px;}
-    100%    {border-color: red; left:500px; top:200px;}    
-}
-@keyframes second {
-    0%      {border-color: red; left:500px; top:200px;}
-    25%     {border-color: red; left:270px; top:200px; transform: rotate(0)}
-    50%     {border-color: red; transform: rotate(45deg);}
-    75%    {border-color: red; left:270px; top:200px; transform: rotate(0)}
-    100%    {border-color: blue; left:20px; top:204px; background: transparent; height: 73px; width: 73px; border-radius: 0;}
-}
-@keyframes third {
-    0%      {border-color: blue; left:20px; top:204px; background: transparent; height: 73px; width: 73px; border-radius: 0;}
-    100%    {border-color: transparent; left:440px; top:440px; background: radial-gradient(#f8d161, #f76b1c); height: 150px; width: 150px; border-radius: 150px;}
+@keyframes hero {
+    /* Position initiale (en haut a gauche) */
+    0% {
+        border-color: red;
+        left: 18px;
+        top: 20px;        
+    }
+    /* Etape 1 (en haut, de gauche à droite) */
+    29.41% {
+        border-color: red; 
+        left:500px; 
+        top:20px;
+    }
+    /* Etape 2 (au milieu à droite) */
+    41.18% {
+        border-color: red; 
+        left:500px; 
+        top:200px;
+        transform: rotate(0);
+    }
+    /* Etape 3 (au centre, en losange) */
+    44.12%, 55.88% {
+        border-color: red; 
+        transform: rotate(45deg);
+        left: 270px;
+        top: 200px;
+    }
+    /* Etape 4 (au centre vers la gauche) */
+    70.59% {
+        transform: rotate(0);
+        border-color: blue; 
+        left:20px; 
+        top:204px; 
+        background: transparent; 
+        height: 73px; 
+        width: 73px; 
+        border-radius: 0;
+    }
+    /* Position finale (cercle en bas à droite) */
+    100% {
+        border-color: transparent; 
+        left:440px; 
+        top:440px; 
+        background: radial-gradient( #f8d161, #f76b1c); 
+        height: 150px; 
+        width: 150px; 
+        border-radius: 150px;
+    }
 }
 #hero {
     border: 1px dashed red;
@@ -22,9 +53,7 @@
     display: block;
     height: 73px;
     width: 73px;
-    animation: first 10s 0s infinite,
-               second 5s 5s infinite,
-               third 5s 10s infinite;
+    animation: hero 17s 0s infinite;
 }
 #stage {
     height: 600px;
