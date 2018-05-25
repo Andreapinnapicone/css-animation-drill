@@ -1,14 +1,20 @@
-@keyframes hero {
+@keyframes first {
     0%      {border-color: red; left:18px; top:20px;}
-    10%     {border-color: red; left:500px; top:20px;}
-    20%     {border-color: red; left:500px; top:200px;}
-    30%     {border-color: red; left:270px; top:200px; transform: rotate(0)}
-    40%     {border-color: red; transform: rotate(45deg);}
-    50%     {border-color: red; left:270px; top:200px; transform: rotate(0)}
-    60%     {border-color: blue; left:18px; top:205px;}
-    70%     {border-color: red; left:475px; top:475px; background: transparent; border-radius: 0;}
-    90%     {background: radial-gradient(#f76b1c, #f8d161); size: 150px; border-radius: 50px;}
-    100%    {background: radial-gradient(#f76b1c, #f8d161); size: 150px; border-radius: 50px;}
+    25%     {border-color: red; left:500px; top:20px;}
+    50%     {border-color: red; left:500px; top:200px;}
+    75%     {border-color: red; left:500px; top:200px;}
+    100%    {border-color: red; left:500px; top:200px;}    
+}
+@keyframes second {
+    0%      {border-color: red; left:500px; top:200px;}
+    25%     {border-color: red; left:270px; top:200px; transform: rotate(0)}
+    50%     {border-color: red; transform: rotate(45deg);}
+    75%    {border-color: red; left:270px; top:200px; transform: rotate(0)}
+    100%    {border-color: blue; left:20px; top:204px; background: transparent; height: 73px; width: 73px; border-radius: 0;}
+}
+@keyframes third {
+    0%      {border-color: blue; left:20px; top:204px; background: transparent; height: 73px; width: 73px; border-radius: 0;}
+    100%    {border-color: transparent; left:440px; top:440px; background: radial-gradient(#f8d161, #f76b1c); height: 150px; width: 150px; border-radius: 150px;}
 }
 #hero {
     border: 1px dashed red;
@@ -16,7 +22,9 @@
     display: block;
     height: 73px;
     width: 73px;
-    animation: hero 20s infinite;
+    animation: first 10s 0s infinite,
+               second 5s 5s infinite,
+               third 5s 10s infinite;
 }
 #stage {
     height: 600px;
